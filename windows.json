@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "lan": {
+    "enabled": true,
+    "error": ""
+  },
+  "app": true,
+  "version": "1.14.1",
+  "title": true,
+  "desktop": true,
+  "origin": "app://local",
+  "katex": true,
+  "idb": "indexeddb",
+  "local": true,
+  "proxyStatus": 502,
+  "proxyBody": "{\"error\":\"ollama unreachable: fetch failed\"}",
+  "lanInfo": {
+    "enabled": false,
+    "port": 8770,
+    "token": "F3ZM76",
+    "addresses": [],
+    "error": ""
+  }
+}
