@@ -1,0 +1,435 @@
++ APP=com.dersasistani.app
+++ ls apk/KampusAI-1.14.1.apk
+++ head -1
++ APK=apk/KampusAI-1.14.1.apk
+++ curl -s https://api.github.com/repos/alperenay/ders-asistani/releases/latest
+++ cut '-d"' -f4
+++ grep -o '"browser_download_url": *"[^"]*\.apk"'
+++ head -1
++ OLD_URL=https://github.com/alperenay/ders-asistani/releases/download/v1.14.1/KampusAI-1.14.1.apk
++ '[' -n https://github.com/alperenay/ders-asistani/releases/download/v1.14.1/KampusAI-1.14.1.apk ']'
++ curl -sL -o old.apk https://github.com/alperenay/ders-asistani/releases/download/v1.14.1/KampusAI-1.14.1.apk
++ adb install old.apk
+Performing Streamed Install
+Success
++ echo 'ESKİ SÜRÜM KURULDU: https://github.com/alperenay/ders-asistani/releases/download/v1.14.1/KampusAI-1.14.1.apk'
+ESKİ SÜRÜM KURULDU: https://github.com/alperenay/ders-asistani/releases/download/v1.14.1/KampusAI-1.14.1.apk
++ adb install -r apk/KampusAI-1.14.1.apk
+Performing Streamed Install
+Success
++ echo 'GÜNCELLEME: BAŞARILI (eski sürümün üzerine kuruldu)'
+GÜNCELLEME: BAŞARILI (eski sürümün üzerine kuruldu)
++ head -10
++ adb shell dumpsys package com.dersasistani.app
++ grep -iE 'signatures|pastSigningCertificates|signing'
+      Signing KeySets: 59
+    apkSigningVersion=3
+    signatures=PackageSignatures{688ef6 version:3, signatures:[9798a686], past signatures:[]}
++ adb shell settings put secure show_ime_with_hard_keyboard 1
++ adb shell pm grant com.dersasistani.app android.permission.POST_NOTIFICATIONS
+++ adb shell pm path com.dersasistani.app
+++ sed 's/^package://; s#/base.apk.*##'
+++ head -1
+++ tr -d '\r'
++ APKDIR=/data/app/~~DfjkDrulvHZHmiRhUtE17w==/com.dersasistani.app-n1MlsufrSzi666vlNTyb9w==
++ adb shell ls -la /data/app/~~DfjkDrulvHZHmiRhUtE17w==/com.dersasistani.app-n1MlsufrSzi666vlNTyb9w==/lib/x86_64/
+total 12040
+drwxr-xr-x 2 system system     4096 2026-10-17 20:02 .
+drwxr-xr-x 3 system system     4096 2026-10-17 20:02 ..
+-rwxr-xr-x 1 system system 12308392 1981-01-01 01:01 libllama-server.so
++ adb shell run-as com.dersasistani.app /data/app/~~DfjkDrulvHZHmiRhUtE17w==/com.dersasistani.app-n1MlsufrSzi666vlNTyb9w==/lib/x86_64/libllama-server.so --version
+run-as: package not debuggable: com.dersasistani.app
++ echo 'run-as yok (sürüm derlemesi): motor dosyası yukarıda listelendi'
+run-as yok (sürüm derlemesi): motor dosyası yukarıda listelendi
++ adb shell am start -W -n com.dersasistani.app/.MainActivity
+Starting: Intent { cmp=com.dersasistani.app/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.dersasistani.app/.MainActivity
+TotalTime: 3461
+WaitTime: 3512
+Complete
++ sleep 20
+++ adb shell wm size
+++ grep -oE '[0-9]+x[0-9]+'
+++ tail -1
++ SIZE=320x640
++ W=320
++ H=640
++ echo 'ekran: 320 x 640'
+ekran: 320 x 640
++ n=0
++ shot tur-hosgeldin
++ n=1
++ adb exec-out screencap -p
+++ printf %02d 1
++ tap_text 'Turu başlat' 0.75 0.62
++ local 'text=Turu başlat' fx=0.75 fy=0.62 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - 'Turu başlat'
++ xy=
++ '[' -n '' ']'
++ sleep 2
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - 'Turu başlat'
++ xy='237 506'
++ '[' -n '237 506' ']'
++ break
++ '[' -z '237 506' ']'
++ '[' -z '237 506' ']'
++ echo 'dokun: Turu başlat → 237 506'
+dokun: Turu başlat → 237 506
++ adb shell input tap 237 506
++ sleep 4
++ shot tur-asistan
++ n=2
++ adb exec-out screencap -p
+++ printf %02d 2
++ for i in 1 2 3 4 5 6 7
++ tap_text İleri 0.85 0.93
++ local text=İleri fx=0.85 fy=0.93 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - İleri
++ xy='243 574'
++ '[' -n '243 574' ']'
++ break
++ '[' -z '243 574' ']'
++ '[' -z '243 574' ']'
++ echo 'dokun: İleri → 243 574'
+dokun: İleri → 243 574
++ adb shell input tap 243 574
++ sleep 3
++ for i in 1 2 3 4 5 6 7
++ tap_text İleri 0.85 0.93
++ local text=İleri fx=0.85 fy=0.93 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - İleri
++ xy='243 574'
++ '[' -n '243 574' ']'
++ break
++ '[' -z '243 574' ']'
++ '[' -z '243 574' ']'
++ echo 'dokun: İleri → 243 574'
+dokun: İleri → 243 574
++ adb shell input tap 243 574
++ sleep 3
++ for i in 1 2 3 4 5 6 7
++ tap_text İleri 0.85 0.93
++ local text=İleri fx=0.85 fy=0.93 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - İleri
++ xy='243 574'
++ '[' -n '243 574' ']'
++ break
++ '[' -z '243 574' ']'
++ '[' -z '243 574' ']'
++ echo 'dokun: İleri → 243 574'
+dokun: İleri → 243 574
++ adb shell input tap 243 574
++ sleep 3
++ for i in 1 2 3 4 5 6 7
++ tap_text İleri 0.85 0.93
++ local text=İleri fx=0.85 fy=0.93 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - İleri
++ xy='243 574'
++ '[' -n '243 574' ']'
++ break
++ '[' -z '243 574' ']'
++ '[' -z '243 574' ']'
++ echo 'dokun: İleri → 243 574'
+dokun: İleri → 243 574
++ adb shell input tap 243 574
++ sleep 3
++ for i in 1 2 3 4 5 6 7
++ tap_text İleri 0.85 0.93
++ local text=İleri fx=0.85 fy=0.93 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - İleri
++ xy='243 246'
++ '[' -n '243 246' ']'
++ break
++ '[' -z '243 246' ']'
++ '[' -z '243 246' ']'
++ echo 'dokun: İleri → 243 246'
+dokun: İleri → 243 246
++ adb shell input tap 243 246
++ sleep 3
++ for i in 1 2 3 4 5 6 7
++ tap_text İleri 0.85 0.93
++ local text=İleri fx=0.85 fy=0.93 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - İleri
++ xy='243 224'
++ '[' -n '243 224' ']'
++ break
++ '[' -z '243 224' ']'
++ '[' -z '243 224' ']'
++ echo 'dokun: İleri → 243 224'
+dokun: İleri → 243 224
++ adb shell input tap 243 224
++ sleep 3
++ for i in 1 2 3 4 5 6 7
++ tap_text İleri 0.85 0.93
++ local text=İleri fx=0.85 fy=0.93 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - İleri
++ xy='243 268'
++ '[' -n '243 268' ']'
++ break
++ '[' -z '243 268' ']'
++ '[' -z '243 268' ']'
++ echo 'dokun: İleri → 243 268'
+dokun: İleri → 243 268
++ adb shell input tap 243 268
++ sleep 3
++ shot tur-hatirlatici
++ n=3
++ adb exec-out screencap -p
+++ printf %02d 3
++ tap_text 'Hatırlatıcıları aç'
++ local 'text=Hatırlatıcıları aç' fx= fy= xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - 'Hatırlatıcıları aç'
++ xy='101 222'
++ '[' -n '101 222' ']'
++ break
++ '[' -z '101 222' ']'
++ '[' -z '101 222' ']'
++ echo 'dokun: Hatırlatıcıları aç → 101 222'
+dokun: Hatırlatıcıları aç → 101 222
++ adb shell input tap 101 222
++ sleep 10
++ shot tur-hatirlatici-acik
++ n=4
++ adb exec-out screencap -p
+++ printf %02d 4
++ echo '== bildirimler'
+== bildirimler
++ adb shell dumpsys notification --noredact
++ grep -iE 'pkg=com.dersasistani.app|android.title=|android.text='
++ head -20
+    NotificationRecord(0x0396acc3: pkg=com.dersasistani.app user=UserHandle{0} id=911 tag=null importance=4 key=0|com.dersasistani.app|911|null|10209: Notification(channel=study shortcut=null contentView=null vibrate=null sound=null defaults=0 flags=ONLY_ALERT_ONCE|AUTO_CANCEL color=0xff5b7cfa vis=PRIVATE))
+      opPkg=com.dersasistani.app
+      icon=Icon(typ=RESOURCE pkg=com.dersasistani.app id=0x7f070062)
+                android.title=String (Hatırlatıcılar açık ✓)
+                android.text=String (Programım'a ders bloğu ekleyince saatinde haber vereceğim.)
+                android.title=String (AT Translated Set 2 keyboard configured)
+                android.text=String (Keyboard layout set to English (US). Tap to change.)
+                android.title=String (Serial console enabled)
+                android.text=String (Performance is impacted. To disable, check bootloader.)
++ echo '== alarmlar'
+== alarmlar
++ adb shell dumpsys alarm
++ grep -c com.dersasistani.app
+2
++ tap_text İleri 0.85 0.93
++ local text=İleri fx=0.85 fy=0.93 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - İleri
++ xy='237 427'
++ '[' -n '237 427' ']'
++ break
++ '[' -z '237 427' ']'
++ '[' -z '237 427' ']'
++ echo 'dokun: İleri → 237 427'
+dokun: İleri → 237 427
++ adb shell input tap 237 427
++ sleep 4
++ shot tur-konular
++ n=5
++ adb exec-out screencap -p
+++ printf %02d 5
++ tap_text 'Turu geç' 0.85 0.06
++ local 'text=Turu geç' fx=0.85 fy=0.06 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - 'Turu geç'
++ xy='259 65'
++ '[' -n '259 65' ']'
++ break
++ '[' -z '259 65' ']'
++ '[' -z '259 65' ']'
++ echo 'dokun: Turu geç → 259 65'
+dokun: Turu geç → 259 65
++ adb shell input tap 259 65
++ sleep 4
++ shot ana-ekran
++ n=6
++ adb exec-out screencap -p
+++ printf %02d 6
++ tap_text @edit 0.5 0.42
++ local text=@edit fx=0.5 fy=0.42 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - @edit
++ xy='111 292'
++ '[' -n '111 292' ']'
++ break
++ '[' -z '111 292' ']'
++ '[' -z '111 292' ']'
++ echo 'dokun: @edit → 111 292'
+dokun: @edit → 111 292
++ adb shell input tap 111 292
++ sleep 3
++ adb shell input text Merhaba
++ sleep 3
++ shot klavye-ana
++ n=7
++ adb exec-out screencap -p
+++ printf %02d 7
++ adb shell dumpsys input_method
++ grep -E 'mInputShown|mIsInputViewShown'
++ head -3
+  mInputShown=false
+  mIsInputViewShown=false mStatusIcon=0
++ adb shell input keyevent 66
++ sleep 15
++ shot sohbet-yanit
++ n=8
++ adb exec-out screencap -p
+++ printf %02d 8
++ tap_text @edit 0.5 0.86
++ local text=@edit fx=0.5 fy=0.86 xy=
++ for try in 1 2 3
++ adb shell uiautomator dump /sdcard/ui.xml
++ adb pull /sdcard/ui.xml shots/ui.xml
+++ python3 - @edit
++ xy='111 292'
++ '[' -n '111 292' ']'
++ break
++ '[' -z '111 292' ']'
++ '[' -z '111 292' ']'
++ echo 'dokun: @edit → 111 292'
+dokun: @edit → 111 292
++ adb shell input tap 111 292
++ sleep 3
++ adb shell input text Turev
++ sleep 3
++ shot klavye-sohbet
++ n=9
++ adb exec-out screencap -p
+++ printf %02d 9
++ adb shell dumpsys input_method
++ head -3
++ grep -E 'mInputShown|mIsInputViewShown'
+  mInputShown=true
+  mIsInputViewShown=true mStatusIcon=0
++ adb shell input keyevent 4
++ sleep 2
++ shot klavye-kapali
++ n=10
++ adb exec-out screencap -p
+++ printf %02d 10
++ adb logcat -d
++ grep -iE 'Capacitor|chromium|Console|AndroidRuntime|LN' shots/android-logcat.txt
++ tail -80
+10-17 20:03:50.453  4037  4037 I AndroidRuntime: Using default boot image
+10-17 20:03:50.454  4037  4037 I AndroidRuntime: Leaving lock profiling enabled
+10-17 20:03:50.551  4037  4037 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-17 20:03:50.606  4037  4037 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-17 20:03:51.729  4037  4037 D AndroidRuntime: Shutting down VM
+10-17 20:03:52.503  4056  4056 D nativeloader: Configuring clns-shared-7 for other apk /apex/com.android.extservices/priv-app/GoogleExtServices@350820300/GoogleExtServices.apk. target_sdk_version=35, uses_libraries=, library_path=/apex/com.android.extservices/priv-app/GoogleExtServices@350820300/lib/x86_64:/apex/com.android.extservices/priv-app/GoogleExtServices@350820300/GoogleExtServices.apk!/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.ext.services:/apex/com.android.extservices/priv-app/GoogleExtServices@350820300:/system/lib64:/system_ext/lib64
+10-17 20:03:56.040  4149  4149 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-17 20:03:56.062  4149  4149 I AndroidRuntime: Using default boot image
+10-17 20:03:56.062  4149  4149 I AndroidRuntime: Leaving lock profiling enabled
+10-17 20:03:56.300  4149  4149 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-17 20:03:56.375  4149  4149 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-17 20:03:57.391  3316  3475 D dasx    : Starting download: https://c.tenor.com/l1-dLn8nwooAAAAk/tenor.gif
+10-17 20:03:57.391  3316  3475 V dasx    : Is http uri, downloading (uri: https://c.tenor.com/l1-dLn8nwooAAAAk/tenor.gif)
+10-17 20:03:57.615  3316  3448 D dasx    : Starting download: https://c.tenor.com/lngU4P3JhMMAAAAk/tenor.gif
+10-17 20:03:57.615  3316  3448 V dasx    : Is http uri, downloading (uri: https://c.tenor.com/lngU4P3JhMMAAAAk/tenor.gif)
+10-17 20:03:57.659  4149  4149 D AndroidRuntime: Shutting down VM
+10-17 20:03:58.474  3316  3461 D dasx    : Starting download: https://c.tenor.com/3t2SPYOflNkAAAAk/tenor.gif
+10-17 20:03:58.474  3316  3461 V dasx    : Is http uri, downloading (uri: https://c.tenor.com/3t2SPYOflNkAAAAk/tenor.gif)
+10-17 20:03:58.702  3316  3448 D dasx    : Starting download: https://c.tenor.com/5UTlNjb9_vcAAAAk/tenor.gif
+10-17 20:03:58.702  3316  3448 V dasx    : Is http uri, downloading (uri: https://c.tenor.com/5UTlNjb9_vcAAAAk/tenor.gif)
+10-17 20:04:02.167  4190  4190 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-17 20:04:02.189  4190  4190 I AndroidRuntime: Using default boot image
+10-17 20:04:02.189  4190  4190 I AndroidRuntime: Leaving lock profiling enabled
+10-17 20:04:02.438  4190  4190 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-17 20:04:02.576  4190  4190 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-17 20:04:04.913  4190  4190 D AndroidRuntime: Shutting down VM
+10-17 20:04:09.180  4271  4271 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-17 20:04:09.188  4271  4271 I AndroidRuntime: Using default boot image
+10-17 20:04:09.188  4271  4271 I AndroidRuntime: Leaving lock profiling enabled
+10-17 20:04:09.248  4271  4271 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-17 20:04:09.283  4271  4271 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-17 20:04:10.347  4271  4271 D AndroidRuntime: Shutting down VM
+10-17 20:04:14.349  4310  4310 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-17 20:04:14.352  4310  4310 I AndroidRuntime: Using default boot image
+10-17 20:04:14.352  4310  4310 I AndroidRuntime: Leaving lock profiling enabled
+10-17 20:04:14.406  4310  4310 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-17 20:04:14.432  4310  4310 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-17 20:04:15.470  4310  4310 D AndroidRuntime: Shutting down VM
+10-17 20:04:19.610  4334  4334 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-17 20:04:19.614  4334  4334 I AndroidRuntime: Using default boot image
+10-17 20:04:19.614  4334  4334 I AndroidRuntime: Leaving lock profiling enabled
+10-17 20:04:19.686  4334  4334 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-17 20:04:19.716  4334  4334 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-17 20:04:20.771  4334  4334 D AndroidRuntime: Shutting down VM
+10-17 20:04:21.079  1077  1134 D SubscriptionRepository: getSelectableSubscriptionInfoList: [[SubscriptionInfo: id=1 iccId=89860318640220133897 simSlotIndex=0 portIndex=0 isEmbedded=false carrierId=1 displayName=CARD 1 carrierName=T-Mobile isOpportunistic=false groupUuid=null groupOwner= isGroupDisabled=false displayNameSource=UNKNOWN iconTint=-15181124 number=+15551234567 dataRoaming=0 mcc=310 mnc=260 ehplmns=[] hplmns=[] cardString=89860318640220133897 cardId=0 nativeAccessRules=null carrierConfigAccessRules=[cert: 92B5F8117FBD9BD5738FF168A4FA12CBE284BE834EDE1A7BB44DD8455BA15920 pkg: com.tmobile.rsuapp access: 0, cert: 92B5F8117FBD9BD5738FF168A4FA12CBE284BE834EDE1A7BB44DD8455BA15920 pkg: com.tmobile.echolocate access: 0, cert: 92B5F8117FBD9BD5738FF168A4FA12CBE284BE834EDE1A7BB44DD8455BA15920 pkg: com.tmobile.services.nameid access: 0, cert: 92B5F8117FBD9BD5738FF168A4FA12CBE284BE834EDE1A7BB44DD8455BA15920 pkg: com.tmobile.pr.mytmobile access: 0, cert: 92B5F8117FBD9BD5738FF168A4FA12CBE284BE834EDE1A7BB44DD8455BA15920 pkg: com.tmobile.vvm.application access: 0, cert: 3D1A4BEF6EE7AF7D34D120E7B1AAC0DD245585DE6237CF100F68333AFACFF562 pkg: com.tmobile.rsuapp access: 0, cert: 3D1A4BEF6EE7AF7D34D120E7B1AAC0DD245585DE6237CF100F68333AFACFF562 pkg: com.tmobile.echolocate access: 0, cert: 3D1A4BEF6EE7AF7D34D120E7B1AAC0DD245585DE6237CF100F68333AFACFF562 pkg: com.tmobile.services.nameid access: 0, cert: 3D1A4BEF6EE7AF7D34D120E7B1AAC0DD245585DE6237CF100F68333AFACFF562 pkg: com.tmobile.pr.mytmobile access: 0, cert: 3D1A4BEF6EE7AF7D34D120E7B1AAC0DD245585DE6237CF100F68333AFACFF562 pkg: com.tmobile.vvm.application access: 0, cert: 6892793FC413019D2DF609DFED7AF622D0F2D8FCF96EFA7E3FB87EEA34E10B93 pkg: com.tmobile.rsuapp access: 0, cert: 6892793FC413019D2DF609DFED7AF622D0F2D8FCF96EFA7E3FB87EEA34E10B93 pkg: com.tmobile.echolocate access: 0, cert: 6892793FC413019D2DF609DFED7AF622D0F2D8FCF96EFA7E3FB87EEA34E10B93 pkg: com.tmobile.services.nameid access: 0, cert: 6892793FC413019D2DF609DFED7AF622D0F2D8FCF96EFA7E3FB87EEA34E10B93 pkg: com.tmobile.pr.mytmobile access: 0, cert: 6892793FC413019D2DF609DFED7AF622D0F2D8FCF96EFA7E3FB87EEA34E10B93 pkg: com.tmobile.vvm.application access: 0, cert: 7B68FD9D4E7610C9CB35FC0C6CC06EA04C6906E3DFA9F48F9A05460AF36BFFFC pkg: com.tmobile.rsuapp access: 0, cert: 7B68FD9D4E7610C9CB35FC0C6CC06EA04C6906E3DFA9F48F9A05460AF36BFFFC pkg: com.tmobile.echolocate access: 0, cert: 7B68FD9D4E7610C9CB35FC0C6CC06EA04C6906E3DFA9F48F9A05460AF36BFFFC pkg: com.tmobile.services.nameid access: 0, cert: 7B68FD9D4E7610C9CB35FC0C6CC06EA04C6906E3DFA9F48F9A05460AF36BFFFC pkg: com.tmobile.pr.mytmobile access: 0, cert: 7B68FD9D4E7610C9CB35FC0C6CC06EA04C6906E3DFA9F48F9A05460AF36BFFFC pkg: com.tmobile.vvm.application access: 0] countryIso=us profileClass=-1 mType=LOCAL_SIM areUiccApplicationsEnabled=true usageSetting=DEFAULT isOnlyNonTerrestrialNetwork=false serviceCapabilities=[1, 2, 3] transferStatus=0]]
+10-17 20:04:31.898  4409  4409 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-17 20:04:31.901  4409  4409 I AndroidRuntime: Using default boot image
+10-17 20:04:31.901  4409  4409 I AndroidRuntime: Leaving lock profiling enabled
+10-17 20:04:31.957  4409  4409 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-17 20:04:31.985  4409  4409 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-17 20:04:33.709  4409  4409 D AndroidRuntime: Shutting down VM
+10-17 20:04:38.793  4433  4433 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-17 20:04:38.796  4433  4433 I AndroidRuntime: Using default boot image
+10-17 20:04:38.796  4433  4433 I AndroidRuntime: Leaving lock profiling enabled
+10-17 20:04:38.848  4433  4433 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-17 20:04:38.873  4433  4433 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-17 20:04:39.912  4433  4433 D AndroidRuntime: Shutting down VM
+10-17 20:04:41.691  2663  2723 I chromium: [INFO:document_style_environment_variables.cc(104)] E2E_Used SafeAreaInsetBottom
+10-17 20:04:44.970  4457  4457 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-17 20:04:44.973  4457  4457 I AndroidRuntime: Using default boot image
+10-17 20:04:44.973  4457  4457 I AndroidRuntime: Leaving lock profiling enabled
+10-17 20:04:45.025  4457  4457 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-17 20:04:45.049  4457  4457 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-17 20:04:46.076  4457  4457 D AndroidRuntime: Shutting down VM
+10-17 20:05:08.607  4505  4505 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-17 20:05:08.610  4505  4505 I AndroidRuntime: Using default boot image
+10-17 20:05:08.610  4505  4505 I AndroidRuntime: Leaving lock profiling enabled
+10-17 20:05:08.662  4505  4505 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-17 20:05:08.685  4505  4505 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-17 20:05:09.715  4505  4505 D AndroidRuntime: Shutting down VM
+10-17 20:05:10.599  2556  2556 D InputMethodManager: showSoftInput() view=com.getcapacitor.CapacitorWebView{18e41ef VFEDHVC.. .F...... 0,0-320,640 #7f0800bf app:id/webview aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+10-17 20:05:10.809  1327  1327 I HardKeyTracker: HardKeyTracker.registerKeySequence():139 Register key sequence lnk{labelResId=2132019800, callback=cfr@582bb8, lastModifier=2, keyCodes=[56], actions=[0]}
+10-17 20:05:10.847  1327  1327 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():183 Unregister key sequence lnk{labelResId=2132019804, callback=cfr@fec2fe2, lastModifier=2, keyCodes=[48], actions=[0]}
+10-17 20:05:10.847  1327  1327 I HardKeyTracker: HardKeyTracker.registerKeySequence():139 Register key sequence lnk{labelResId=2132019804, callback=cfr@4d770a2, lastModifier=2, keyCodes=[48], actions=[0]}
+10-17 20:05:10.847  1327  1327 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():183 Unregister key sequence lnk{labelResId=2132019799, callback=cfr@27ff1b5, lastModifier=2, keyCodes=[50], actions=[0]}
+10-17 20:05:10.847  1327  1327 I HardKeyTracker: HardKeyTracker.registerKeySequence():139 Register key sequence lnk{labelResId=2132019799, callback=cfr@7f11c25, lastModifier=2, keyCodes=[50], actions=[0]}
+10-17 20:05:11.647  2663  2723 I chromium: [INFO:document_style_environment_variables.cc(104)] E2E_Used SafeAreaInsetBottom
+10-17 20:05:11.684  2663  2723 I chromium: [INFO:document_style_environment_variables.cc(104)] E2E_Used SafeAreaInsetBottom
+10-17 20:05:17.181  2663  2723 I chromium: [INFO:document_style_environment_variables.cc(104)] E2E_Used SafeAreaInsetBottom
+10-17 20:05:17.198  2663  2723 I chromium: [INFO:document_style_environment_variables.cc(104)] E2E_Used SafeAreaInsetBottom
+++ adb shell pidof com.dersasistani.app
++ pidof_app=2556
++ echo 'app pid: 2556'
+app pid: 2556
++ test -n 2556
