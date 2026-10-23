@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "lan": {
+    "enabled": true,
+    "error": ""
+  },
+  "cihaz": {
+    "secim": "tam",
+    "oneri": "tam",
+    "bellek": 17174360064,
+    "gomuluMotor": false
+  },
+  "app": true,
+  "version": "1.36.0",
+  "title": true,
+  "desktop": true,
+  "origin": "app://local",
+  "katex": true,
+  "idb": "indexeddb",
+  "local": true,
+  "proxyStatus": 502,
+  "proxyBody": "{\"error\":\"ollama unreachable: fetch failed\"}",
+  "lanInfo": {
+    "enabled": false,
+    "port": 8770,
+    "token": "S78NW8",
+    "addresses": [],
+    "error": ""
+  }
+}
